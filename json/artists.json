@@ -1,0 +1,320 @@
+{
+    "artists": [
+        {
+            "id": 1,
+            "name": "Imagine Dragons",
+            "image": "../images/imaginedragons.jpg",
+            "popular_songs": [
+                {
+                    "title": "Believer",
+                    "cover": "../images/beliver.jpg",
+                    "src": "../images/beliver.mp3"
+                },
+                {
+                    "title": "Thunder",
+                    "cover": "../images/thunder.jpg",
+                    "src": "../images/thunder.mp3"
+                },
+                {
+                    "title": "Radioactive",
+                    "cover": "../images/radioactive.jpg",
+                    "src": "../images/radioactive.mp3"
+                },
+                {
+                    "title": "Whatever It Takes",
+                    "cover": "../images/whateverittakes.jpg",
+                    "src": "../images/whateverittakes.mp3"
+                },
+                {
+                    "title": "Take Me to the Beach",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/takemetothebeach.mp3"
+                },
+                {
+                    "title": "Natural",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/natural.mp3"
+                },
+                {
+                    "title": "Wake Up",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/wakeup.mp3"
+                },
+                {
+                    "title": "Nice to Meet You",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/nicetomeetyou.mp3"
+                },
+                {
+                    "title": "Eyes Closed",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/eyesclosed.mp3"
+                },
+                {
+                    "title": "Take Me to the Beach",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/takemetothebeach.mp3"
+                },
+                {
+                    "title": "In Your Corner",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/inyourcorner.mp3"
+                },
+                {
+                    "title": "Gods Don't Pray",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/godsdontpray.mp3"
+                },
+                {
+                    "title": "Don't Forget Me",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/dontforgetme.mp3"
+                },
+                {
+                    "title": "Kid",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/kid.mp3"
+                },
+                {
+                    "title": "Fire in These Hills",
+                    "cover": "../images/loom.jpg",
+                    "src": "../images/loom/fireinthesehills.mp3"
+                },
+                {
+                    "title": "Natural",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/natural.mp3"
+                },
+                {
+                    "title": "Boomerang",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/boomerang.mp3"
+                },
+                {
+                    "title": "Machine",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/machine.mp3"
+                },
+                {
+                    "title": "Cool Out",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/coolout.mp3"
+                },
+                {
+                    "title": "Bad Liar",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/badliar.mp3"
+                },
+                {
+                    "title": "West Coast",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/westcoast.mp3"
+                },
+                {
+                    "title": "Zero",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/zero.mp3"
+                },
+                {
+                    "title": "Bullet In A Gun",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/bulletinagun.mp3"
+                },
+                {
+                    "title": "Digital",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/digital.mp3"
+                },
+                {
+                    "title": "Only",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/only.mp3"
+                },
+                {
+                    "title": "Stuck",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/stuck.mp3"
+                },
+                {
+                    "title": "Love",
+                    "cover": "../images/origins.jpg",
+                    "src": "../images/origins/love.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "Loom",
+                    "cover": "../images/loom.jpg",
+                    "songs": [
+                        {
+                            "title": "Wake Up",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/wakeup.mp3"
+                        },
+                        {
+                            "title": "Nice to Meet You",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/nicetomeetyou.mp3"
+                        },
+                        {
+                            "title": "Eyes Closed",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/eyesclosed.mp3"
+                        },
+                        {
+                            "title": "Take Me to the Beach",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/takemetothebeach.mp3"
+                        },
+                        {
+                            "title": "In Your Corner",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/inyourcorner.mp3"
+                        },
+                        {
+                            "title": "Gods Don't Pray",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/godsdontpray.mp3"
+                        },
+                        {
+                            "title": "Don't Forget Me",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/dontforgetme.mp3"
+                        },
+                        {
+                            "title": "Kid",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/kid.mp3"
+                        },
+                        {
+                            "title": "Fire in These Hills",
+                            "cover": "../images/loom.jpg",
+                            "src": "../images/loom/fireinthesehills.mp3"
+                        }
+                    ]
+                },
+                {
+                    "title": "Origins",
+                    "cover": "../images/origins.jpg",
+                    "songs": [
+                        {
+                            "title": "Natural",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/natural.mp3"
+                        },
+                        {
+                            "title": "Boomerang",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/boomerang.mp3"
+                        },
+                        {
+                            "title": "Machine",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/machine.mp3"
+                        },
+                        {
+                            "title": "Cool Out",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/coolout.mp3"
+                        },
+                        {
+                            "title": "Bad Liar",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/badliar.mp3"
+                        },
+                        {
+                            "title": "West Coast",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/westcoast.mp3"
+                        },
+                        {
+                            "title": "Zero",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/zero.mp3"
+                        },
+                        {
+                            "title": "Bullet In A Gun",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/bulletinagun.mp3"
+                        },
+                        {
+                            "title": "Digital",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/digital.mp3"
+                        },
+                        {
+                            "title": "Only",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/only.mp3"
+                        },
+                        {
+                            "title": "Stuck",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/stuck.mp3"
+                        },
+                        {
+                            "title": "Love",
+                            "cover": "../images/origins.jpg",
+                            "src": "../images/origins/love.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-11-15",
+                    "location": "Los Angeles"
+                },
+                {
+                    "date": "2024-12-01",
+                    "location": "New York"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Coldplay",
+            "image": "../images/coldplay.jpg",
+            "popular_songs": [
+                {
+                    "title": "Yellow",
+                    "cover": "../images/yellow.jpg",
+                    "src": "../images/yellow.mp3"
+                },
+                {
+                    "title": "Viva La Vida",
+                    "cover": "../images/vivalavida.jpg",
+                    "src": "../images/vivalavida.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "A Head Full of Dreams",
+                    "cover": "../images/aheadoffdreams.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-11-20",
+                    "location": "London"
+                },
+                {
+                    "date": "2024-12-05",
+                    "location": "Berlin"
+                }
+            ]
+        }
+    ]
+}

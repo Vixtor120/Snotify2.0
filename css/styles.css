@@ -1,0 +1,520 @@
+/* Variables de color */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #333;
+    --background-dark: #181818;
+    --background-darker: #121212;
+    --text-light: #f1f1f1;
+}
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-darker);
+    color: var(--text-light);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--background-dark);
+}
+
+.navbar .logo {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.navbar input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 830px;
+    max-width: 100%; /* Limitar ancho en pantallas grandes */
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    margin: 0 auto;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebars */
+.sidebar-left, .sidebar-right {
+    background-color: var(--background-dark);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popular-songs, .popular-artists, .radios, .equalizer {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popular-songs h3, .popular-artists h3, .radios h3, .equalizer h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.popular-songs h3::after, .popular-artists h3::after, 
+.radios h3::after, .equalizer h3::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.song, .artist, .radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.song img, .artist img, .radio img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex: 1;
+    background-color: var(--background-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    height: 720px;
+    overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    outline: 1px solid #555;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.main-content h2 {
+    font-size: 1.5em;
+}
+
+/* Radios */
+.radios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.radio:hover {
+    background-color: var(--secondary-color);
+}
+
+.radio img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.radio span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* Botón de reproducción */
+.play-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.play-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.play-button:active {
+    transform: scale(0.95);
+}
+
+/* Estilos de la sección de artistas */
+.artists-photomain {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 0px;
+}
+
+.artist-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.artist-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.artist-img:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.artist-img h4 {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #979696;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .navbar input {
+        width: 100%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-buttons button {
+        margin: 5px 0;
+    }
+
+    .sidebar-left, .sidebar-right {
+        padding: 10px;
+    }
+}
+
+.anuncio {
+    position: relative; /* Necesario para posicionar el botón de cierre */
+    display: flex;
+    justify-content: center; /* Centra el anuncio horizontalmente */
+    align-items: center; /* Centra el anuncio verticalmente */
+    margin: 20px 0; /* Espacio alrededor del anuncio */
+    padding: 10px; /* Espacio interno del anuncio */
+    background-color: #f9f9f9; /* Color de fondo del anuncio */
+    border: 1px solid #ddd; /* Borde del anuncio */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del anuncio */
+}
+
+.anuncio img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados de la imagen */
+}
+
+.close-button {
+    position: absolute; /* Posiciona el botón de cierre dentro del anuncio */
+    top: 10px; /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la parte derecha */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 20px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    color: black;
+    background-color: red;
+    padding: 1px;
+    margin: 5px;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: #302a2a;
+    margin: 10% auto;
+    padding: 30px; /* Aumento de padding */
+    border: 1px solid #ccc;
+    width: 90%; /* Mayor ancho */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+h2 {
+    margin-bottom: 20px; /* Espacio inferior del título */
+    font-size: 24px; /* Tamaño del texto más grande */
+    text-align: center; /* Centramos el título */
+    color: #014e12; /* Color del título */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px; /* Más espaciado entre grupos */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #432eff;
+}
+
+.form-group input {
+    padding: 12px; /* Aumento de padding */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: -10px;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Player Controls */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: var(--background-dark); /* Color de fondo del control de reproductor */
+    color: var(--text-light);
+    margin-top: 20px; /* Espacio superior */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra superior para efecto de profundidad */
+    border-radius: 10px;
+    flex-direction: column; /* Align buttons vertically */
+}
+
+.player-controls .controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Space between buttons and vinyl */
+}
+
+.player-controls .controls button {
+    margin: 0 10px; /* Increased margin for better spacing */
+    background-color: var(--primary-color); /* Changed to primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Increased padding for better appearance */
+    border-radius: 50%; /* Circular buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.player-controls .controls button:hover {
+    background-color: #45a049; /* Slightly lighter shade on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.player-controls .controls button:active {
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
+.player-controls .volume-control {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    margin-top: 10px; /* Space between volume control and buttons */
+}
+
+.vinyl {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    transition: transform 0.5s linear;
+    z-index: 1;
+}
+
+.vinyl.playing {
+    animation: spin 2s linear infinite;
+}
+
+.current-song {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.volume-control .control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#volume {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#volumeSlider {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en navegadores WebKit */
+    appearance: none;
+    width: 100px; /* Ajusta el ancho a tu preferencia */
+    height: 8px;
+    background: linear-gradient(to right, #4CAF50, #d3d3d3); /* Degradado con color principal */
+    border-radius: 10px;
+    outline: none;
+    transition: background 0.2s ease; /* Suaviza el cambio de color */
+    cursor: pointer;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Estilo del control de la barra (thumb) */
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+}
+
+#volumeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+}
+
+/* Cambiar color al hacer hover sobre el control */
+#volumeSlider:hover::-webkit-slider-thumb {
+    background-color: #66BB6A; /* Color más claro en hover */
+}
+
+#volumeSlider:hover::-moz-range-thumb {
+    background-color: #66BB6A; /* Color más claro en hover */
+}
+
+.admin-panel-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get the element to line up correctly */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin: 10px;
+}
+
+.admin-panel-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

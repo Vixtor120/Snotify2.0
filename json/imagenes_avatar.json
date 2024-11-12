@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Avatar 1",
+        "path": "../avatares/avatar1.png"
+    },
+    {
+        "name": "Avatar 2",
+        "path": "../avatares/avatar2.png"
+    },
+    {
+        "name": "Avatar 3",
+        "path": "../avatares/avatar3.png"
+    },
+    {
+        "name": "Avatar 4",
+        "path": "../avatares/avatar4.png"
+    },
+    {
+        "name": "Avatar 5",
+        "path": "../avatares/avatar5.png"
+    },
+    {
+        "name": "Avatar 6",
+        "path": "../avatares/avatar6.png"
+    }
+]

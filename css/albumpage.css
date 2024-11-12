@@ -1,0 +1,132 @@
+/* Variables de color */
+:root {
+    --primary-color: #4CAF50; /* Color principal */
+    --secondary-color: #333; /* Color secundario */
+    --background-dark: #1f1f1f; /* Color de fondo del navbar y controles */
+    --background-darker: #121212; /* Color de fondo oscuro general */
+    --text-light: #f1f1f1; /* Color de texto claro */
+    --text-dark: #333; /* Color de texto oscuro */
+}
+
+/* Estilos generales para el body */
+body {
+    font-family: 'Arial', sans-serif; /* Asegúrate de usar la misma fuente que en index */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-darker); /* Color de fondo oscuro */
+    color: var(--text-light); /* Color de texto claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el body ocupe al menos la altura de la ventana */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-dark); /* Color de fondo del navbar */
+    color: var(--text-light);
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+}
+
+.navbar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color); /* Fondo oscuro para el input */
+    color: var(--text-light); /* Texto claro en el input */
+}
+
+/* Estilo de los botones de autenticación */
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: var(--secondary-color); /* Color de fondo de los botones */
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #444; /* Color de fondo al pasar el mouse */
+}
+
+/* Album Banner */
+.album-banner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-dark); /* Color de fondo oscuro */
+    border-bottom: 2px solid var(--primary-color); /* Línea divisoria más clara */
+}
+
+.album-image img {
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 80px; /* Ajusta este valor para hacer la imagen más pequeña */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+.album-title {
+    font-size: 2em;
+    color: var(--text-light);
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex: 1; /* Permite que el contenedor ocupe el espacio restante */
+}
+
+/* Album Songs */
+.album-songs {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho de la sección */
+}
+
+.album-songs h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.album-songs .song {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #2a2a2a; /* Fondo más oscuro para las canciones */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+}
+
+.album-songs .song img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px; /* Opcional */
+    margin-right: 10px;
+}
+
+.album-songs .song-info {
+    flex-grow: 1;
+}
+
+/* styles.css */
+
+.equalizer-container {
+    position: absolute;
+    bottom: -17px;
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+}

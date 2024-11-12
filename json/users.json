@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "username": "Victor",
+        "password": "$2y$10$aGbwvOYOR9tleHpPqGoHp.BnNSM\/XjU\/uUlLrat.1ukY4e5r3byNy",
+        "image": "..\/avatares\/avatar3.png",
+        "registration_date": "2024-11-07 19:35:41",
+        "last_login": "2024-11-11 12:46:38",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "username": "Iker",
+        "password": "$2y$10$USOHV0kPTqPLuee55gloXudAcZzIW.QKFKIxquflmV4uVP3c1U2Zi",
+        "image": "..\/avatares\/avatar3.png",
+        "registration_date": "2024-11-07 19:45:01",
+        "last_login": "2024-11-12 19:55:36",
+        "role": "user"
+    },
+    {
+        "id": 3,
+        "username": "Alejandro",
+        "image": "..\/avatares\/avatar4.png",
+        "registration_date": "2024-11-11",
+        "last_login": "2024-11-11",
+        "role": "admin"
+    }
+]
