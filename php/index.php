@@ -125,6 +125,10 @@ if ($user_id) {
 
         <main class="main-content">
             <div class="artists-photomain" id="artists-container"></div>
+            <div class="favorite-songs">
+                <h3>Canciones Favoritas</h3>
+                <div id="favorite-songs-container"></div>
+            </div>
         </main>
 
         <aside class="sidebar-right">
@@ -205,6 +209,23 @@ if ($user_id) {
                     vinyl.classList.add('playing');
                 }
             });
+
+            // Load favorite songs
+            const favoriteSongsContainer = document.getElementById('favorite-songs-container');
+            fetch('../json/favorite_songs.json')
+                .then(response => response.json())
+                .then(data => {
+                    data.favorite_songs.forEach(song => {
+                        const songDiv = document.createElement('div');
+                        songDiv.classList.add('song');
+                        songDiv.innerHTML = `
+                            <img src="${song.cover}" alt="${song.title}">
+                            <span>${song.title}</span>
+                        `;
+                        favoriteSongsContainer.appendChild(songDiv);
+                    });
+                })
+                .catch(error => console.error('Error loading favorite songs:', error));
         });
     </script>
 </body>

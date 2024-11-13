@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const artistDiv = document.createElement("div");
             artistDiv.classList.add("artist-img");
             artistDiv.innerHTML = `
-                <a href="artist_page.html?id=${artist.id}">
+                <a href="artist_page.php?id=${artist.id}">
                     <img src="${artist.image}" alt="${artist.name}">
                 </a>
                 <h4>${artist.name}</h4>
