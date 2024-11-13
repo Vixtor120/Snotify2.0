@@ -68,6 +68,11 @@ if ($user_id) {
             <a href="admin_panel.php" class="admin-panel-button">Panel de Control</a>
             <?php endif; ?>
         </div>
+        <?php else: ?>
+        <div class="auth-links">
+            <a href="../php/login.php" class="admin-panel-button">Login</a>
+            <a href="../php/register.php" class="admin-panel-button">Register</a>
+        </div>
         <?php endif; ?>
     </header>
 

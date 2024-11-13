@@ -1,3 +1,24 @@
+<?php
+session_start();
+$user_id = $_SESSION['user_id'] ?? null;
+$user = null;
+
+if ($user_id) {
+    $filePath = '../json/users.json';
+    if (file_exists($filePath)) {
+        $json = file_get_contents($filePath);
+        $users = json_decode($json, true) ?? []; // Ensure $users is always an array
+        if (is_array($users)) { // Ensure $users is an array
+            foreach ($users as $u) {
+                if ($u['id'] == $user_id) {
+                    $user = $u;
+                    break;
+                }
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +34,22 @@
 <body>
     <header class="navbar">
         <img src="../images/logo.png" alt="Logo" class="logo">
-        <div class="auth-buttons">
-            <button>Register</button>
-            <button>Log In</button>
+        <?php if ($user): ?>
+        <div class="user-section">
+            <a href="user_profile.php?id=<?php echo $user['id']; ?>">
+                <span><?php echo $user['username']; ?></span>
+                <img src="<?php echo $user['image']; ?>" alt="User Image" class="user-image">
+            </a>
+            <?php if ($user['role'] === 'admin'): ?>
+            <a href="admin_panel.php" class="admin-panel-button">Panel de Control</a>
+            <?php endif; ?>
         </div>
+        <?php else: ?>
+        <div class="auth-links">
+            <a href="../php/login.php" class="admin-panel-button">Login</a>
+            <a href="../php/register.php" class="admin-panel-button">Register</a>
+        </div>
+        <?php endif; ?>
     </header>
 
     <!-- Album Banner -->
