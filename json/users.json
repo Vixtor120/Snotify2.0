@@ -6,7 +6,8 @@
         "image": "..\/avatares\/avatar3.png",
         "registration_date": "2024-11-07 19:35:41",
         "last_login": "2024-11-13 18:34:18",
-        "role": "admin"
+        "role": "admin",
+        "favorite_songs": []
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "image": "..\/avatares\/avatar3.png",
         "registration_date": "2024-11-07 19:45:01",
         "last_login": "2024-11-13 18:48:02",
-        "role": "user"
+        "role": "user",
+        "favorite_songs": []
     },
     {
         "id": 3,
@@ -23,6 +25,7 @@
         "image": "..\/avatares\/avatar2.png",
         "registration_date": "2024-11-13 10:56:40",
         "last_login": "2024-11-13 10:56:40",
-        "role": "user"
+        "role": "user",
+        "favorite_songs": []
     }
 ]
