@@ -50,6 +50,12 @@ if ($user_id) {
         .admin-panel-button:hover {
             background-color: #45a049; /* Darker green on hover */
         }
+        .favorite-songs{
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+        }
     </style>
 </head>
 
@@ -117,6 +123,10 @@ if ($user_id) {
                     <span>Laura Pausini</span>
                 </div>
             </div>
+            <div class="favorite-songs">
+                <h3>Canciones Favoritas</h3>
+                <div id="favorite-songs-container"></div>
+            </div>
             <div class="anuncio">
                 <button class="close-button">&times;</button>
                 <img src="../images/anuncio.jpg" alt="Anuncio">
@@ -125,10 +135,6 @@ if ($user_id) {
 
         <main class="main-content">
             <div class="artists-photomain" id="artists-container"></div>
-            <div class="favorite-songs">
-                <h3>Canciones Favoritas</h3>
-                <div id="favorite-songs-container"></div>
-            </div>
         </main>
 
         <aside class="sidebar-right">

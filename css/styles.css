@@ -79,7 +79,7 @@ body {
     gap: 20px;
 }
 
-.popular-songs, .popular-artists, .radios, .equalizer {
+.popular-songs, .popular-artists, .radios, .equalizer{
     background-color: #1e1e1e;
     padding: 15px;
     border-radius: 10px;
@@ -517,4 +517,41 @@ h2 {
 
 .admin-panel-button:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+
+.favorite-songs {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.favorite-songs h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.favorite-songs h3::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.favorite-songs .song {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.favorite-songs .song img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }
