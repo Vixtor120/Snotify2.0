@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <h4>${song.title}</h4>
                             </div>
                             <button class="play-song-button" data-index="${index}">Play</button>
+                            <i class="far fa-star favorite-icon"></i>
                         `;
                         albumSongsContainer.appendChild(songDiv);
                     });
