@@ -59,7 +59,7 @@ if ($user_id) {
         <img src="../images/logo.png" alt="Logo" class="logo">
         <input type="text" placeholder="Buscar Artistas">
         <?php if ($user): ?>
-        <div class="user-section">
+        <div class="user-section" style="margin:10px;">
             <a href="user_profile.php?id=<?php echo $user['id']; ?>">
                 <span><?php echo $user['username']; ?></span>
                 <img src="<?php echo $user['image']; ?>" alt="User Image" class="user-image">

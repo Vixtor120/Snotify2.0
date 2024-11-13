@@ -124,68 +124,89 @@ if (isset($_GET['message'])) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/user_profile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            :root {
+                --primary-color: #4CAF50;
+                --secondary-color: #333;
+                --background-dark: #181818;
+                --background-darker: #121212;
+                --text-light: #f1f1f1;
+            }
+            body {
+                background-color: var(--background-darker);
+                color: var(--text-light);
+            }
+            .card {
+                background-color: var(--background-dark);
+            }
+        </style>
         <title>Perfil de Usuario</title>
     </head>
 <body>
-<div class="user-profile">
-    <img src="../images/logo.png" alt="Logo" class="logo">
-    <h2>Editar Perfil</h2>
-    <p>Fecha de Registro: <?php echo $registrationDate; ?></p>
-    <p>Última vez que inició sesión: <?php echo $lastLogin; ?></p>
-    <p>Rol de Usuario: <?php echo $userRole; ?></p> 
-    <form action="user_profile.php" method="post" class="responsive-form">
-        <div class="form-group">
-            <label for="username">Nombre de Usuario:</label>
-            <input type="text" id="username" name="username" value="<?php echo $currentUsername; ?>" required>
-            <button type="submit" name="update_username">Guardar Nombre</button>
-        </div>
-    </form>
-    <form action="user_profile.php" method="post" class="responsive-form">
-        <div class="form-group">
-            <label for="avatar_image">Seleccionar Avatar:</label>
-            <div class="avatar-selection">
-                <?php if (!empty($avatarImages)): ?>
-                    <?php foreach ($avatarImages as $avatar): ?>
-                        <label>
-                            <input type="radio" name="avatar_image" value="<?php echo $avatar['path']; ?>">
-                            <img src="<?php echo $avatar['path']; ?>" alt="<?php echo $avatar['name']; ?>" style="width: 50px; height: 50px;">
-                        </label>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>No hay avatares disponibles.</p>
-                <?php endif; ?>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body text-center">
+            <img src="../images/logo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 150px;">
+            <h2 class="card-title">Editar Perfil</h2>
+            <p class="card-text">Fecha de Registro: <?php echo $registrationDate; ?></p>
+            <p class="card-text">Última vez que inició sesión: <?php echo $lastLogin; ?></p>
+            <p class="card-text">Rol de Usuario: <?php echo $userRole; ?></p>
+            <form action="user_profile.php" method="post" class="mb-3">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" value="<?php echo $currentUsername; ?>" class="form-control" required>
+                    <button type="submit" name="update_username" class="btn btn-primary mt-2">Guardar Nombre</button>
+                </div>
+            </form>
+            <form action="user_profile.php" method="post" class="mb-3">
+                <div class="form-group">
+                    <label for="avatar_image">Seleccionar Avatar:</label>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <?php if (!empty($avatarImages)): ?>
+                            <?php foreach ($avatarImages as $avatar): ?>
+                                <label class="mr-2">
+                                    <input type="radio" name="avatar_image" value="<?php echo $avatar['path']; ?>">
+                                    <img src="<?php echo $avatar['path']; ?>" alt="<?php echo $avatar['name']; ?>" class="img-thumbnail" style="width: 50px; height: 50px;">
+                                </label>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>No hay avatares disponibles.</p>
+                        <?php endif; ?>
+                    </div>
+                    <button type="submit" name="update_avatar" class="btn btn-primary mt-2">Guardar Imagen</button>
+                </div>
+            </form>
+            <form action="user_profile.php" method="post" class="mb-3">
+                <div class="form-group">
+                    <label for="current_password">Contraseña Actual:</label>
+                    <input type="password" id="current_password" name="current_password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="new_password">Nueva Contraseña:</label>
+                    <input type="password" id="new_password" name="new_password" class="form-control" required>
+                    <?php if (isset($message) && !empty($message)): ?>
+                    <p class="text-danger mt-2"><?php echo htmlspecialchars($message); ?></p>
+                    <?php endif; ?>
+                </div>
+                <button type="submit" name="update_password" class="btn btn-primary">Guardar Contraseña</button>
+            </form>
+            <div class="d-flex flex-column">
+                <form action="user_profile.php" method="post" class="mb-2">
+                    <button type="submit" name="delete_account" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar tu cuenta?');">Eliminar Cuenta</button>
+                </form>
+                <form action="../php/index.php" method="get" class="mb-2">
+                    <button type="submit" class="btn btn-secondary">Volver al Index</button>
+                </form>
+                <form action="user_profile.php" method="post">
+                    <button type="submit" name="logout" class="btn btn-secondary">Cerrar Sesión</button>
+                </form>
             </div>
-            <button type="submit" name="update_avatar">Guardar Imagen</button>
         </div>
-    </form>
-    <form action="user_profile.php" method="post" class="responsive-form">
-    <div class="form-group">
-        <label for="current_password">Contraseña Actual:</label>
-        <input type="password" id="current_password" name="current_password" required>
-    </div>
-    <div class="form-group">
-        <label for="new_password">Nueva Contraseña:</label>
-        <input type="password" id="new_password" name="new_password" required>
-        <?php if (isset($message) && !empty($message)): ?>
-        <p style="color=red;" class="success-message"><?php echo htmlspecialchars($message); ?></p>
-        <?php endif; ?>
-    </div>
-
-    <button type="submit" name="update_password" style="margin: 5px;">Guardar Contraseña</button>
-</form>
-
-    <div class="button-grid">
-        <form action="user_profile.php" method="post">
-            <button type="submit" name="delete_account" onclick="return confirm('¿Estás seguro de que deseas eliminar tu cuenta?');">Eliminar Cuenta</button>
-        </form>
-        <form action="../php/index.php" method="get"> 
-            <button type="submit">Volver al Index</button>
-        </form>
-        <form action="user_profile.php" method="post"> <!-- Updated form for logout -->
-            <button type="submit" name="logout">Cerrar Sesión</button>
-        </form>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

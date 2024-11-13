@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const pageartist = `../php/artist_page.php?${artist.id}`; // Construir la URL para cada artista
 
                     artistDiv.innerHTML = ` 
-                    <a href="#" onclick="window.location.href='${pageartist}'"> 
+                    <a href="#" onclick="window.location.href='${pageartist}"> 
                         <img src="${artist.image}" alt="${artist.name}">
                     </a>
                     <h4>${artist.name}</h4>
