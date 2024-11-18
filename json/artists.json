@@ -4,6 +4,7 @@
             "id": 1,
             "name": "Imagine Dragons",
             "image": "../images/imaginedragons.jpg",
+            "mood": "energetic",
             "popular_songs": [
                 {
                     "title": "Believer",
@@ -275,6 +276,7 @@
             "id": 2,
             "name": "Coldplay",
             "image": "../images/coldplay.jpg",
+            "mood": "happy",
             "popular_songs": [
                 {
                     "title": "Yellow",

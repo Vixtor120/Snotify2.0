@@ -12,6 +12,7 @@ if ($user_id) {
             foreach ($users as $u) {
                 if ($u['id'] == $user_id) {
                     $user = $u;
+                    $_SESSION['user_mood'] = $user['mood']; // Store user mood in session
                     break;
                 }
             }
@@ -65,6 +66,7 @@ if ($user_id) {
         <img src="../images/logo.png" alt="Logo" class="logo">
         <input type="text" placeholder="Buscar Artistas">
         <?php if ($user): ?>
+        <input type="hidden" id="user-id" value="<?php echo $user['id']; ?>">
         <div class="user-section" style="margin:10px;">
             <a href="user_profile.php?id=<?php echo $user['id']; ?>">
                 <span><?php echo $user['username']; ?></span>
@@ -232,6 +234,10 @@ if ($user_id) {
                     });
                 })
                 .catch(error => console.error('Error loading favorite songs:', error));
+
+            // Set user mood in local storage
+            // const userMood = '<?php echo $user['mood'] ?? ''; ?>';
+            // localStorage.setItem('userMood', userMood);
         });
     </script>
 </body>

@@ -65,6 +65,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+    if (isset($_POST['update_mood'])) {
+        $mood = $_POST['mood'];
+
+        // Actualizar el estado de ánimo en el JSON
+        foreach ($users as &$user) {
+            if ($user['id'] == $userId) {
+                $user['mood'] = $mood;
+                break;
+            }
+        }
+        // Guardar los cambios en el archivo JSON
+        file_put_contents($jsonFile, json_encode($users, JSON_PRETTY_PRINT));
+    }
+
     if (isset($_POST['delete_account'])) {
         // Eliminar la cuenta del usuario
         foreach ($users as $key => $user) {
@@ -104,12 +118,14 @@ $currentUsername = '';
 $registrationDate = '';
 $lastLogin = '';
 $userRole = ''; // Variable para almacenar el rol del usuario
+$currentMood = '';
 foreach ($users as $user) {
     if ($user['id'] == $_SESSION['user_id']) {
         $currentUsername = $user['username'];
         $registrationDate = $user['registration_date'];
         $lastLogin = $user['last_login'];
         $userRole = $user['role']; // Obtener el rol del usuario
+        $currentMood = $user['mood'] ?? '';
         break;
     }
 }
@@ -191,6 +207,18 @@ if (isset($_GET['message'])) {
                 </div>
                 <button type="submit" name="update_password" class="btn btn-primary">Guardar Contraseña</button>
             </form>
+            <form action="user_profile.php" method="post" class="mb-3">
+                <div class="form-group">
+                    <label for="mood">Estado de Ánimo:</label>
+                    <select id="mood" name="mood" class="form-control">
+                        <option value="">Ninguno</option>
+                        <option value="happy" <?php echo $currentMood == 'happy' ? 'selected' : ''; ?>>Feliz</option>
+                        <option value="energetic" <?php echo $currentMood == 'energetic' ? 'selected' : ''; ?>>Energético</option>
+                        <option value="sad" <?php echo $currentMood == 'sad' ? 'selected' : ''; ?>>Triste</option>
+                    </select>
+                    <button type="submit" name="update_mood" class="btn btn-primary mt-2">Guardar Estado de Ánimo</button>
+                </div>
+            </form>
             <div class="d-flex flex-column">
                 <form action="user_profile.php" method="post" class="mb-2">
                     <button type="submit" name="delete_account" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar tu cuenta?');">Eliminar Cuenta</button>
@@ -206,7 +234,7 @@ if (isset($_GET['message'])) {
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

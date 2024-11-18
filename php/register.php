@@ -45,7 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'image' => $image_path,
             'registration_date' => date('Y-m-d H:i:s'),
             'last_login' => date('Y-m-d H:i:s'),
-            'role' => 'user' // Add default role
+            'role' => 'user', // Add default role
+            'mood' => '' // Add mood field
         ];
 
         $users[] = $userData;

@@ -30,6 +30,27 @@ if ($user_id) {
     <link rel="stylesheet" href="../css/albumpage.css">
     <link rel="stylesheet" href="../css/user.css">
     <title>Album Page</title>
+    <style>
+        .admin-panel-button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Get the element to line up correctly */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Some margin */
+            cursor: pointer; /* Pointer/hand icon */
+            border-radius: 12px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+            margin: 10px;
+        }
+
+        .admin-panel-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
 </head>
 
 <body>

@@ -5,9 +5,10 @@
         "password": "$2y$10$aGbwvOYOR9tleHpPqGoHp.BnNSM\/XjU\/uUlLrat.1ukY4e5r3byNy",
         "image": "..\/avatares\/avatar3.png",
         "registration_date": "2024-11-07 19:35:41",
-        "last_login": "2024-11-13 18:34:18",
+        "last_login": "2024-11-18 16:23:49",
         "role": "admin",
-        "favorite_songs": []
+        "favorite_songs": [],
+        "mood": "happy"
     },
     {
         "id": 2,
@@ -15,9 +16,10 @@
         "password": "$2y$10$USOHV0kPTqPLuee55gloXudAcZzIW.QKFKIxquflmV4uVP3c1U2Zi",
         "image": "..\/avatares\/avatar3.png",
         "registration_date": "2024-11-07 19:45:01",
-        "last_login": "2024-11-13 18:48:02",
+        "last_login": "2024-11-18 15:49:39",
         "role": "user",
-        "favorite_songs": []
+        "favorite_songs": [],
+        "mood": ""
     },
     {
         "id": 3,
@@ -26,6 +28,17 @@
         "registration_date": "2024-11-13 10:56:40",
         "last_login": "2024-11-13 10:56:40",
         "role": "user",
-        "favorite_songs": []
+        "favorite_songs": [],
+        "mood": ""
+    },
+    {
+        "id": 4,
+        "username": "Pedro",
+        "password": "$2y$10$g8BAZi\/cTKfgPA362l1c0OCwTZn19NWypUrjTmdhz8eIswqiYLctO",
+        "image": "..\/images\/avatar.png",
+        "registration_date": "2024-11-18 16:46:32",
+        "last_login": "2024-11-18 17:01:46",
+        "role": "user",
+        "mood": "energetic"
     }
 ]
