@@ -317,6 +317,248 @@
                     "location": "Berlin"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "name": "Taylor Swift",
+            "image": "../images/taylorswift.jpg",
+            "mood": "happy",
+            "popular_songs": [
+                {
+                    "title": "Shake It Off",
+                    "cover": "../images/shakeitoff.jpg",
+                    "src": "../images/shakeitoff.mp3"
+                },
+                {
+                    "title": "Blank Space",
+                    "cover": "../images/blanckspace.jpg",
+                    "src": "../images/blankspace.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "1989",
+                    "cover": "../images/1989.jpg",
+                    "songs": [
+                        {
+                            "title": "Welcome to New York",
+                            "cover": "../images/welcometonewyork.jpg",
+                            "src": "../images/welcometonewyork.mp3"
+                        },
+                        {
+                            "title": "Blank Space",
+                            "cover": "../images/blanckspace.jpg",
+                            "src": "../images/blankspace.mp3"
+                        },
+                        {
+                            "title": "Style",
+                            "cover": "../images/style.jpg",
+                            "src": "../images/style.mp3"
+                        },
+                        {
+                            "title": "Out of the Woods",
+                            "cover": "../images/outofthewoods.jpg",
+                            "src": "../images/outofthewoods.mp3"
+                        },
+                        {
+                            "title": "All You Had to Do Was Stay",
+                            "cover": "../images/allyouhadtodowasstay.jpg",
+                            "src": "../images/allyouhadtodowasstay.mp3"
+                        },
+                        {
+                            "title": "Shake It Off",
+                            "cover": "../images/shakeitoff.jpg",
+                            "src": "../images/shakeitoff.mp3"
+                        },
+                        {
+                            "title": "I Wish You Would",
+                            "cover": "../images/iwishyouwould.jpg",
+                            "src": "../images/iwishyouwould.mp3"
+                        },
+                        {
+                            "title": "Bad Blood",
+                            "cover": "../images/badblood.jpg",
+                            "src": "../images/badblood.mp3"
+                        },
+                        {
+                            "title": "Wildest Dreams",
+                            "cover": "../images/wildestdreams.jpg",
+                            "src": "../images/wildestdreams.mp3"
+                        },
+                        {
+                            "title": "How You Get the Girl",
+                            "cover": "../images/howyougetthegirl.jpg",
+                            "src": "../images/howyougetthegirl.mp3"
+                        },
+                        {
+                            "title": "This Love",
+                            "cover": "../images/thislove.jpg",
+                            "src": "../images/thislove.mp3"
+                        },
+                        {
+                            "title": "I Know Places",
+                            "cover": "../images/iknowplaces.jpg",
+                            "src": "../images/iknowplaces.mp3"
+                        },
+                        {
+                            "title": "Clean",
+                            "cover": "../images/clean.jpg",
+                            "src": "../images/clean.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-10-30",
+                    "location": "Chicago"
+                },
+                {
+                    "date": "2024-11-10",
+                    "location": "Toronto"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Billie Eilish",
+            "image": "../images/billieeilish.jpg",
+            "mood": "sad",
+            "popular_songs": [
+                {
+                    "title": "Bad Guy",
+                    "cover": "../images/badguy.jpg",
+                    "src": "../songs/badguy.mp3"
+                },
+                {
+                    "title": "When the Party's Over",
+                    "cover": "../images/whenthepartysover.jpg",
+                    "src": "../songs/whenthepartysover.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "When We All Fall Asleep, Where Do We Go?",
+                    "cover": "../images/whenweallfallasleep.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-11-25",
+                    "location": "San Francisco"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Depeche Mode",
+            "image": "../images/depechemode.jpg",
+            "mood": "sad",
+            "popular_songs": [
+                {
+                    "title": "Enjoy the Silence",
+                    "cover": "../images/enjoythesilence.jpg",
+                    "src": "../songs/enjoythesilence.mp3"
+                },
+                {
+                    "title": "Personal Jesus",
+                    "cover": "../images/personaljesus.jpg",
+                    "src": "../songs/personaljesus.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "Violator",
+                    "cover": "../images/violator.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                },
+                {
+                    "title": "Songs of Faith and Devotion",
+                    "cover": "../images/songsoffaithanddevotion.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-12-20",
+                    "location": "Paris"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Dani Fernández",
+            "image": "../images/danifernandez.jpg",
+            "popular_songs": [
+                {
+                    "title": "Todo Cambia",
+                    "cover": "../images/todocambia.jpg",
+                    "src": "../songs/todocambia.mp3"
+                },
+                {
+                    "title": "Bailemos",
+                    "cover": "../images/bailemos.jpg",
+                    "src": "../songs/bailemos.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "La Jauria",
+                    "cover": "../images/entreelmarylatierra.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-11-30",
+                    "location": "Barcelona"
+                }
+            ]
         }
     ]
 }
