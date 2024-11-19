@@ -77,6 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         // Guardar los cambios en el archivo JSON
         file_put_contents($jsonFile, json_encode($users, JSON_PRETTY_PRINT));
+
+        // Redirigir al index
+        header("Location: ../php/index.php");
+        exit();
     }
 
     if (isset($_POST['delete_account'])) {

@@ -57,6 +57,44 @@ if ($user_id) {
             border-radius: 10px;
             position: relative;
         }
+        
+.mood-update-form {
+    background-color: var(--background-dark);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--secondary-color);
+}
+
+.mood-update-form label {
+    color: var(--text-light);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mood-update-form .form-control {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mood-update-form .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.mood-update-form .btn-primary:hover {
+    background-color: #45a049;
+}
     </style>
 </head>
 
@@ -85,8 +123,23 @@ if ($user_id) {
     </header>
 
     <div class="container">
-
         <aside class="sidebar-left">
+            <?php if ($user): ?>
+            <div class="mood-update-form card p-3 mb-3">
+                <form action="update_mood.php" method="post">
+                    <div class="form-group">
+                        <label for="mood">Estado de Ánimo:</label>
+                        <select id="mood" name="mood" class="form-control">
+                            <option value="">Ninguno</option>
+                            <option value="happy" <?php echo $_SESSION['user_mood'] == 'happy' ? 'selected' : ''; ?>>Feliz</option>
+                            <option value="energetic" <?php echo $_SESSION['user_mood'] == 'energetic' ? 'selected' : ''; ?>>Energético</option>
+                            <option value="sad" <?php echo $_SESSION['user_mood'] == 'sad' ? 'selected' : ''; ?>>Triste</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Guardar Estado de Ánimo</button>
+                </form>
+            </div>
+            <?php endif; ?>
             <div class="popular-songs">
                 <h3>Canciones Populares</h3>
                 <div class="song">
