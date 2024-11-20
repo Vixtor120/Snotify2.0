@@ -418,6 +418,7 @@
             "id": 6,
             "name": "Dani Fernández",
             "image": "../images/danifernandez.jpg",
+            "mood": "sad",
             "popular_songs": [
                 {
                     "title": "Todo Cambia",
@@ -452,6 +453,90 @@
                 {
                     "date": "2024-11-30",
                     "location": "Barcelona"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Laura Pausini",
+            "image": "../images/laurapausini.jpg",
+            "mood": "happy",
+            "popular_songs": [
+                {
+                    "title": "La Solitudine",
+                    "cover": "../images/lasolitudine.jpg",
+                    "src": "../songs/lasolitudine.mp3"
+                },
+                {
+                    "title": "Strani Amori",
+                    "cover": "../images/straniamori.jpg",
+                    "src": "../songs/straniamori.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "Fatti Sentire",
+                    "cover": "../images/fattisentire.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-12-12",
+                    "location": "Madrid"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Nil Moliner",
+            "image": "../images/nilmoliner.jpg",
+            "mood": "energetic",
+            "popular_songs": [
+                {
+                    "title": "Soldadito de Hierro",
+                    "cover": "../images/soldaditodehierrojpg",
+                    "src": "../songs/soldaditodehierro.mp3"
+                },
+                {
+                    "title": "Mi Religión",
+                    "cover": "../images/mireligion.jpg",
+                    "src": "../songs/mireligion.mp3"
+                }
+            ],
+            "albums": [
+                {
+                    "title": "Lugar Paraiso",
+                    "cover": "../images/comoanterior.jpg",
+                    "songs": [
+                        {
+                            "title": "Whatever It Takes",
+                            "cover": "../images/whateverittakes.jpg",
+                            "src": "../images/whateverittakes.mp3"
+                        },
+                        {
+                            "title": "Believer",
+                            "cover": "../images/beliver.jpg",
+                            "src": "../images/beliver.mp3"
+                        }
+                    ]
+                }
+            ],
+            "concerts": [
+                {
+                    "date": "2024-12-10",
+                    "location": "Valencia"
                 }
             ]
         }
