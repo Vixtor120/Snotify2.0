@@ -2,17 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Selecciona el contenedor de artistas
     const artistsContainer = document.getElementById("artists-container");
 
-    // Obtener el ID del usuario desde un campo oculto
-    const userId = document.getElementById("user-id").value;
-
-    // Función para obtener el estado de ánimo del usuario desde el archivo JSON
+    // Función para obtener el estado de ánimo del usuario desde la cookie
     function getUserMood() {
-        return fetch("../json/users.json")
-            .then(response => response.json())
-            .then(users => {
-                const user = users.find(user => user.id == userId);
-                return user ? user.mood : '';
-            });
+        const name = "user_mood=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
     }
 
     // Función para cargar y mostrar los artistas desde el archivo JSON
@@ -53,5 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Obtener el estado de ánimo del usuario y cargar los artistas
-    getUserMood().then(loadArtists);
+    const userMood = getUserMood();
+    loadArtists(userMood);
 });

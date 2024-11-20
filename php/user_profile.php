@@ -72,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         foreach ($users as &$user) {
             if ($user['id'] == $userId) {
                 $user['mood'] = $mood;
+                setcookie('user_mood', $mood, time() + 86400, "/"); // La cookie expirará en 1 día
                 break;
             }
         }
@@ -213,7 +214,7 @@ if (isset($_GET['message'])) {
             </form>
             <form action="user_profile.php" method="post" class="mb-3">
                 <div class="form-group">
-                    <label for="mood">Estado de Ánimo:</label>
+                    <label for="mood">Estado de Ánimo (Actual: <?php echo $currentMood; ?>):</label>
                     <select id="mood" name="mood" class="form-control">
                         <option value="">Ninguno</option>
                         <option value="happy" <?php echo $currentMood == 'happy' ? 'selected' : ''; ?>>Feliz</option>

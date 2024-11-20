@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -13,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($users as &$user) {
         if ($user['id'] == $userId) {
             $user['mood'] = $mood;
-            $_SESSION['user_mood'] = $mood;
+            setcookie('user_mood', $mood, time() + 86400, "/"); // La cookie expirará en 1 día
+            echo "<script>console.log('Mood set in cookie: " . $mood . "');</script>"; // Log to console
             break;
         }
     }

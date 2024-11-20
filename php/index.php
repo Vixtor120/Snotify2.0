@@ -12,7 +12,9 @@ if ($user_id) {
             foreach ($users as $u) {
                 if ($u['id'] == $user_id) {
                     $user = $u;
-                    $_SESSION['user_mood'] = $user['mood']; // Store user mood in session
+                    if (isset($user['mood'])) {
+                        setcookie('user_mood', $user['mood'], time() + 86400, "/"); // Store user mood in cookie for 1 day
+                    }
                     break;
                 }
             }
@@ -128,12 +130,12 @@ if ($user_id) {
             <div class="mood-update-form card p-3 mb-3">
                 <form action="update_mood.php" method="post">
                     <div class="form-group">
-                        <label for="mood">Estado de Ánimo:</label>
+                        <label for="mood">Estado de Ánimo (Actual: <?php echo isset($_COOKIE['user_mood']) ? $_COOKIE['user_mood'] : 'Ninguno'; ?>):</label>
                         <select id="mood" name="mood" class="form-control">
                             <option value="">Ninguno</option>
-                            <option value="happy" <?php echo $_SESSION['user_mood'] == 'happy' ? 'selected' : ''; ?>>Feliz</option>
-                            <option value="energetic" <?php echo $_SESSION['user_mood'] == 'energetic' ? 'selected' : ''; ?>>Energético</option>
-                            <option value="sad" <?php echo $_SESSION['user_mood'] == 'sad' ? 'selected' : ''; ?>>Triste</option>
+                            <option value="happy" <?php echo isset($_COOKIE['user_mood']) && $_COOKIE['user_mood'] == 'happy' ? 'selected' : ''; ?>>Feliz</option>
+                            <option value="energetic" <?php echo isset($_COOKIE['user_mood']) && $_COOKIE['user_mood'] == 'energetic' ? 'selected' : ''; ?>>Energético</option>
+                            <option value="sad" <?php echo isset($_COOKIE['user_mood']) && $_COOKIE['user_mood'] == 'sad' ? 'selected' : ''; ?>>Triste</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Guardar Estado de Ánimo</button>
