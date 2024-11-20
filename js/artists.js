@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para cargar y mostrar los artistas desde el archivo JSON
     function loadArtists(userMood) {
+        console.log("User mood:", userMood); // Debugging line
         fetch("../json/artists.json")
             .then(response => {
                 if (!response.ok) {
@@ -30,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(data => {
                 artistsContainer.innerHTML = ''; // Clear existing artists
-                // Asegúrate de que estás accediendo a la propiedad correcta
                 data.artists.forEach(artist => { // Iterar sobre cada artista
-                    if (!userMood || artist.mood === userMood) {
+                    if (userMood && artist.mood === userMood) {
+                        console.log("Displaying artist:", artist.name); // Debugging line
                         // Crear la estructura HTML de cada artista
                         const artistDiv = document.createElement("div"); // Crear un div
                         artistDiv.classList.add("artist-img");  // Añadir la clase "artist-img"
@@ -58,5 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Obtener el estado de ánimo del usuario y cargar los artistas
     const userMood = getUserMood();
-    loadArtists(userMood);
+    console.log("User mood from cookie:", userMood); // Debugging line
+    if (userMood) {
+        loadArtists(userMood);
+    } else {
+        console.log("No user mood found in cookie."); // Debugging line
+    }
 });
