@@ -5,10 +5,9 @@
         "password": "$2y$10$aGbwvOYOR9tleHpPqGoHp.BnNSM\/XjU\/uUlLrat.1ukY4e5r3byNy",
         "image": "..\/avatares\/avatar3.png",
         "registration_date": "2024-11-07 19:35:41",
-        "last_login": "2024-11-20 16:26:30",
+        "last_login": "2024-11-20 16:28:36",
         "role": "admin",
-        "favorite_songs": [],
-        "mood": ""
+        "favorite_songs": []
     },
     {
         "id": 2,
@@ -18,8 +17,7 @@
         "registration_date": "2024-11-07 19:45:01",
         "last_login": "2024-11-20 16:14:26",
         "role": "user",
-        "favorite_songs": [],
-        "mood": ""
+        "favorite_songs": []
     },
     {
         "id": 3,
@@ -37,7 +35,6 @@
         "image": "..\/avatares\/avatar5.png",
         "registration_date": "2024-11-18 16:46:32",
         "last_login": "2024-11-20 16:21:35",
-        "role": "user",
-        "mood": ""
+        "role": "user"
     }
 ]
